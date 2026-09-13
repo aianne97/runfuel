@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #0F1720;
+  --surface: #1B2536;
+  --surface-alt: #222E42;
+  --border: #2C394F;
+  --text: #F5F7FA;
+  --text-muted: #8A93A6;
+  --accent-fuel: #FF5D3B;
+  --accent-run: #3ECF8E;
+  --status-kurang: #FFB020;
+  --status-pas: #3ECF8E;
+  --status-lebih: #E63958;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-shell {
+  max-width: 440px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.wordmark {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+.wordmark span { color: var(--accent-fuel); }
+
+.section { padding: 1.5rem; }
+
+.headline {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+
+.subtext {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.card-accent-fuel { border-left: 3px solid var(--accent-fuel); }
+.card-accent-run { border-left: 3px solid var(--accent-run); }
+
+.field { margin-bottom: 1.1rem; }
+.field label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+.field input, .field select {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+}
+.field input:focus, .field select:focus {
+  outline: 2px solid var(--accent-run);
+  outline-offset: 1px;
+}
+
+.toggle-group { display: flex; gap: 0.5rem; }
+.toggle-btn {
+  flex: 1;
+  padding: 0.65rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  color: var(--text-muted);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.toggle-btn.active {
+  background: var(--accent-fuel);
+  border-color: var(--accent-fuel);
+  color: #10171F;
+  font-weight: 600;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.btn-fuel { background: var(--accent-fuel); color: #10171F; }
+.btn-run { background: var(--accent-run); color: #10171F; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.progress-track {
+  background: var(--surface-alt);
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+}
+.progress-fill { height: 100%; transition: width 0.3s ease; }
+
+.status-pill {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.stat-row.total {
+  border-top: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 600;
+  margin-top: 0.3rem;
+  padding-top: 0.7rem;
+}
+
+.week-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  height: 110px;
+  margin: 1rem 0;
+}
+.week-bar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+.week-bar {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+  background: var(--accent-run);
+  min-height: 3px;
+}
+.week-bar-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+}
+
+.message { font-size: 0.85rem; margin: 0.5rem 0; }
+.message.error { color: var(--status-lebih); }
+.message.success { color: var(--accent-run); }
