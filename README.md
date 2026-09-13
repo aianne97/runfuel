@@ -40,7 +40,15 @@ npm install
 npm run dev
 ```
 Buka `http://localhost:5173` (atau port yang ditampilkan di terminal)
+## Screenshoot
+**Onboarding**
+<img width="1915" height="1023" alt="Cuplikan layar 2026-09-13 153626" src="https://github.com/user-attachments/assets/1a0bc22b-d83c-42cc-bfe5-c6fc4fa5e8c7" />
 
+**Dashboard**
+<img width="1895" height="967" alt="Cuplikan layar 2026-09-13 153800" src="https://github.com/user-attachments/assets/51b85fda-7053-4d31-9a5f-6de6516878c7" />
+
+**Input Makanan Dan Input Lari**
+<img width="846" height="825" alt="Cuplikan layar 2026-09-13 170424" src="https://github.com/user-attachments/assets/5fa122b1-36c3-46b0-a100-266adcaa7b56" />
 
 
 ## Logika Utama
